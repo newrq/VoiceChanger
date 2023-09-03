@@ -1,1 +1,1 @@
-﻿check
+﻿NOT FINISHED --- ONLY START UP

@@ -7,7 +7,7 @@ public class VoiceController : IDisposable
 {
     public float Pitch { get; set; }
     public float OutVolume { get; set; }
-    public VoiceEffects VoiceEffect { get; set; } = VoiceEffects.None;
+    public VoiceEffects[] voiceEffects { get; set; }
 
     private int inDevice = 0;
     private int outDevice = 0;
@@ -16,6 +16,7 @@ public class VoiceController : IDisposable
     {
         Console.WriteLine("Disposing program...");
         //TODO: make disposing
+        
         Console.Clear();
     }
 
@@ -42,6 +43,8 @@ public class VoiceController : IDisposable
         
     }
 
+    // TODO: Do everything in the bottom
+
     public async Task ProvideAudio()
     {
 
@@ -56,5 +59,14 @@ public class VoiceController : IDisposable
     {
 
     }
-    
+
+    public void GetAudioEffect()
+    {
+
+    }
+
+    public void GetSettings()
+    {
+
+    }
 }

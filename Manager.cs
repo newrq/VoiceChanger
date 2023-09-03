@@ -111,10 +111,13 @@ public class Manager
             outpudDevice.Init(testAudio);
             Console.WriteLine("Sound playing");
             outpudDevice.Play();
+            int i = 0;
+            
             while (outpudDevice.PlaybackState == PlaybackState.Playing)
             {
                 await Task.Delay(1000);
-                Console.WriteLine("sound playing... 1 sec ");
+                i++;
+                Console.WriteLine($"sound playing...  sec {i}");
             }
             await Task.Delay(3000);
             Console.WriteLine("Sound played");
