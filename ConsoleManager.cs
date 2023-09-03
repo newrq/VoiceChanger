@@ -47,7 +47,7 @@ public class ConsoleManager
                 break;
         }
     }
-
+    
     private async Task CommandHandler()
     {
         Console.Clear();
