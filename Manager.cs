@@ -15,9 +15,10 @@ public class Manager
     public event OperationSucc onOperationSucc;
     
     
-    private VoiceController vc = new VoiceController();
     private ConsoleManager cm;
-    
+    private VoiceController vc;
+
+
     private bool hearSelf = false;
     public int outDevice = 0;
     public int inDevice = 0;
@@ -103,7 +104,7 @@ public class Manager
 
     private async Task Test()
     {
-        using ( var testAudio = new AudioFileReader(@"D:\Projects\VoiceChangerCsharp\VoiceChangerCsharp\Sounds\test.m4a"))
+        using ( var testAudio = new AudioFileReader(@"D:\Projects\VoiceChangerCsharp\VoiceChangerCsharp\Sounds\test.mp3"))
          using (var outpudDevice = new WaveOutEvent(){DeviceNumber = outDevice, Volume = this.Volume })
         {
             Console.WriteLine("Sound init");

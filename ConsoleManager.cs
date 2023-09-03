@@ -18,6 +18,7 @@ public class ConsoleManager
         init();
     }
 
+
     private async Task init()
     {
         await Console.Out.WriteLineAsync("Initing console manager");
@@ -54,7 +55,8 @@ public class ConsoleManager
         int userNum;
         while (commandReg)
         {
-            await Console.Out.WriteLineAsync("¬ведите комманду");
+            await Console.Out.WriteLineAsync("Entter command number");
+            await Console.Out.WriteLineAsync(await GetCommands());
             try
             {
                  userNum = Convert.ToInt32(Console.ReadLine());
@@ -94,6 +96,17 @@ public class ConsoleManager
         
     }
     
+
+    private async Task<string> GetCommands()
+    {
+        string msg = "";
+        for (int i = 0; i < Enum.GetValues(typeof(Commands)).Length; i++)
+        {
+            msg += $"{Enum.GetName(typeof(Commands), i)}  =  {i} \n";
+        }
+
+        return msg;
+    }
     
     
     

@@ -12,10 +12,11 @@ public class VoiceController : IDisposable
     private int inDevice = 0;
     private int outDevice = 0;
     
-
     public void Dispose()
     {
-        Console.WriteLine("Disposing program");
+        Console.WriteLine("Disposing program...");
+        //TODO: make disposing
+        Console.Clear();
     }
 
     public async Task setPitch(float pith)
@@ -28,7 +29,7 @@ public class VoiceController : IDisposable
         Console.Clear();
         await Console.Out.WriteLineAsync("Voice controller started...");
 
-
+        // TODO: MAKE IT
 
         await Console.Out.WriteLineAsync("Press any key to stop it");
 

@@ -12,6 +12,6 @@ namespace VoiceChangerCsharp
         START,
         STOP,
         RECORD,
-        STOP_RECORDING
+        STOP_RECORDING,
     }
 }
